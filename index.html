@@ -3,511 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anam Myolwa | IT Technician & Computer Science Professional</title>
-    <meta name="description" content="Portfolio of Anam Myolwa - Computer Science Honours graduate with expertise in IT support, hardware troubleshooting, network administration, and cybersecurity.">
-    <meta name="keywords" content="IT Technician, Computer Science, Network Administration, IT Support, Pretoria, South Africa">
-    <meta name="author" content="Anam Myolwa">
-    <meta property="og:title" content="Anam Myolwa | IT Technician">
-    <meta property="og:description" content="Computer Science Honours graduate with expertise in IT support and network administration.">
-    <meta property="og:type" content="website">
+    <title>Anam Myolwa - Portfolio</title>
     <link rel="icon" href="images/images.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Cursor Spotlight Effect -->
-    <div id="spotlight"></div>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 font-poppins">
+    <button id="theme-toggle" class="fixed top-20 right-4 p-2 bg-teal-500 text-white rounded-full z-20 hover:bg-teal-600 transition-transform duration-300 md:top-4 pointer-events-auto cursor-pointer">
+        <i class="fas fa-moon"></i>
+    </button>
 
-    <!-- Navigation -->
-    <header id="header">
-        <nav class="nav-container">
-            <a href="#hero" class="logo">
-                <span class="logo-bracket">&lt;</span>AM<span class="logo-bracket">/&gt;</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
-                <span class="hamburger"></span>
+    <nav class="static md:fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-lg z-10 backdrop-blur-md bg-opacity-80 dark:bg-opacity-80">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center py-4">
+            <div class="text-2xl font-bold text-teal-500">Anam Myolwa</div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="nav-link text-teal-500 hover:text-teal-400 transition-colors duration-200"><i class="fas fa-user mr-2"></i>About</a>
+                <a href="#skills" class="nav-link text-teal-500 hover:text-teal-400 transition-colors duration-200"><i class="fas fa-tools mr-2"></i>Skills</a>
+                <a href="#experience" class="nav-link text-teal-500 hover:text-teal-400 transition-colors duration-200"><i class="fas fa-briefcase mr-2"></i>Experience</a>
+                <a href="#education" class="nav-link text-teal-500 hover:text-teal-400 transition-colors duration-200"><i class="fas fa-book mr-2"></i>Education</a>
+                <a href="#contact" class="nav-link text-teal-500 hover:text-teal-400 transition-colors duration-200"><i class="fas fa-envelope mr-2"></i>Contact Me</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-teal-500 hover:text-teal-400 transition-colors duration-200 z-30 relative pointer-events-auto cursor-pointer">
+                <i class="fas fa-bars text-2xl"></i>
             </button>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu">
-        <ul class="mobile-nav-links">
-            <li><a href="#about" class="mobile-nav-link">About</a></li>
-            <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
-            <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
-            <li><a href="#education" class="mobile-nav-link">Education</a></li>
-            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-        </ul>
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-gradient-to-br from-teal-400/80 to-purple-600/80 z-[2147483647] flex flex-col items-center justify-center opacity-0 transition-opacity duration-500 pointer-events-none">
+        <button id="menu-close" class="fixed top-4 left-1/2 transform -translate-x-1/2 p-6 bg-white/20 dark:bg-gray-900/20 rounded-full text-white dark:text-gray-100 hover:text-teal-300 dark:hover:text-teal-300 transition-all duration-300 hover:scale-110 shadow-lg z-[2147483648] pointer-events-auto cursor-pointer">
+            <i class="fas fa-times text-5xl leading-none"></i>
+        </button>
+        <div class="menu-container bg-white/98 dark:bg-gray-900/98 rounded-2xl shadow-2xl p-8 max-w-md w-full flex flex-col items-center gap-6 border border-teal-300/30">
+            <a href="#about" class="nav-link text-white dark:text-gray-100 text-2xl font-semibold hover:text-teal-300 dark:hover:text-teal-300 transition-all duration-300 transform hover:scale-105 opacity-0 translate-y-4"><i class="fas fa-user mr-2"></i>About</a>
+            <a href="#skills" class="nav-link text-white dark:text-gray-100 text-2xl font-semibold hover:text-teal-300 dark:hover:text-teal-300 transition-all duration-300 transform hover:scale-105 opacity-0 translate-y-4"><i class="fas fa-tools mr-2"></i>Skills</a>
+            <a href="#experience" class="nav-link text-white dark:text-gray-100 text-2xl font-semibold hover:text-teal-300 dark:hover:text-teal-300 transition-all duration-300 transform hover:scale-105 opacity-0 translate-y-4"><i class="fas fa-briefcase mr-2"></i>Experience</a>
+            <a href="#education" class="nav-link text-white dark:text-gray-100 text-2xl font-semibold hover:text-teal-300 dark:hover:text-teal-300 transition-all duration-300 transform hover:scale-105 opacity-0 translate-y-4"><i class="fas fa-book mr-2"></i>Education</a>
+            <a href="#contact" class="nav-link text-white dark:text-gray-100 text-2xl font-semibold hover:text-teal-300 dark:hover:text-teal-300 transition-all duration-300 transform hover:scale-105 opacity-0 translate-y-4"><i class="fas fa-envelope mr-2"></i>Contact Me</a>
+        </div>
     </div>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p class="hero-greeting">Hello, I'm</p>
-                    <h1 class="hero-title">Anam Myolwa</h1>
-                    <h2 class="hero-subtitle">
-                        <span class="typing-text"></span><span class="cursor">|</span>
-                    </h2>
-                    <p class="hero-description">
-                        Computer Science Honours graduate with expertise in IT support, 
-                        network administration, and cybersecurity. Passionate about 
-                        solving complex technical challenges.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Get in Touch
-                        </a>
-                        <a href="resume/Anam_Myolwa_CV_2025.pdf" download class="btn btn-secondary">
-                            <i class="fas fa-download"></i> Download CV
-                        </a>
-                    </div>
-                    <div class="hero-social">
-                        <a href="https://linkedin.com/in/anam-myolwa-149371239" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="mailto:anammyolwa@gmail.com" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="hero-image-wrapper">
-                        <div class="hero-image-ring"></div>
-                        <div class="hero-image-ring ring-2"></div>
-                        <img src="images/Myolwa.jpg" alt="Anam Myolwa" class="hero-image">
-                    </div>
-                </div>
+    <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-teal-500 via-teal-600 to-purple-700 text-white pt-16 z-0">
+        <div class="absolute inset-0 bg-pattern opacity-10 z-0 pointer-events-none"></div>
+        <div class="text-center z-0">
+            <img src="images/Myolwa.jpg" alt="Anam Myolwa" class="w-40 h-40 md:w-56 md:h-56 rounded-full mx-auto mb-6 object-cover border-6 border-white shadow-lg">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Anam Myolwa</h1>
+            <p class="text-xl md:text-3xl mt-4 font-light">IT Technician</p>
+            <div class="mt-8 space-y-4">
+                <a href="#contact" class="inline-block px-8 py-4 bg-white text-teal-600 font-semibold rounded-full hover:bg-teal-100 hover:scale-105 transition-transform duration-300 shadow-md pointer-events-auto"><i class="fas fa-paper-plane mr-2"></i>Get in Touch</a>
+                <a href="resume/Anam_Myolwa_CV_2025.pdf" download class="inline-block px-8 py-4 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-700 hover:scale-105 transition-transform duration-300 shadow-md pointer-events-auto"><i class="fas fa-download mr-2"></i>Download Resume</a>
             </div>
-            <div class="scroll-indicator">
-                <span>Scroll Down</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- About Section -->
-        <section id="about" class="section about">
-            <div class="container">
-                <h2 class="section-title">
-                    <span class="title-number">01.</span> About Me
-                </h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>
-                            I'm a <strong>Computer Science Honours graduate</strong> with practical experience 
-                            in IT support, hardware troubleshooting, and network administration. Currently 
-                            serving as an <strong>ICT Intern</strong> at the Department of Sport, Arts, and Culture, 
-                            where I provide first- and second-line support, configure workstations, and manage 
-                            Active Directory for user access.
-                        </p>
-                        <p>
-                            I'm proficient in <strong>ManageEngine tools</strong> for IT service desk operations, 
-                            ensuring optimal system performance and network security. I hold certifications in 
-                            <strong>CompTIA A+</strong> and <strong>CompTIA Security+</strong>, and I'm skilled 
-                            in resolving technical issues and enhancing user training for improved computer literacy.
-                        </p>
-                        <div class="about-highlights">
-                            <div class="highlight-item">
-                                <i class="fas fa-certificate"></i>
-                                <span>CompTIA Certified</span>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-graduation-cap"></i>
-                                <span>Honours Degree</span>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>Security Focused</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat-card">
-                            <span class="stat-number" data-target="8">0</span><span class="stat-plus">+</span>
-                            <span class="stat-label">Certifications</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number" data-target="2">0</span><span class="stat-plus">+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number" data-target="100">0</span><span class="stat-plus">+</span>
-                            <span class="stat-label">Issues Resolved</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section id="about" class="py-20">
+        <div class="max-w-4xl mx-auto px-4" data-aos="fade-up" data-aos-duration="800">
+            <h2 class="text-4xl font-bold text-center mb-10 text-teal-600 dark:text-teal-400"><i class="fas fa-user mr-2"></i>About Me</h2>
+            <p class="text-lg leading-relaxed text-justify">Computer Science Honours graduate with practical experience in IT support, hardware troubleshooting, and network administration. ICT Intern at the Department of Sport, Arts, and Culture, providing first- and second-line support, configuring workstations, and managing Active Directory for user access. Proficient in ManageEngine tools for IT service desk operations, ensuring optimal system performance and network security. Certified in CompTIA A+ and CompTIA Security+, skilled in resolving technical issues and enhancing user training for improved computer literacy.</p>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="section skills">
-            <div class="container">
-                <h2 class="section-title">
-                    <span class="title-number">02.</span> Technical Skills
-                </h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <div class="skill-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>Programming Languages</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">C++</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">HTML5</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">VB.NET</span>
-                            <span class="skill-tag">Bash</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <div class="skill-icon">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <h3>Systems & Platforms</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Linux</span>
-                            <span class="skill-tag">Ubuntu</span>
-                            <span class="skill-tag">Windows Server</span>
-                            <span class="skill-tag">Microsoft Azure</span>
-                            <span class="skill-tag">Active Directory</span>
-                            <span class="skill-tag">ManageEngine</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <div class="skill-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h3>Tools & Software</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">VS Code</span>
-                            <span class="skill-tag">ServiceDesk Plus</span>
-                            <span class="skill-tag">Power BI</span>
-                            <span class="skill-tag">Tableau</span>
-                            <span class="skill-tag">Wireshark</span>
-                            <span class="skill-tag">WSUS</span>
-                            <span class="skill-tag">SCCM</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <div class="skill-icon">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <h3>Networking & Security</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">LAN/WAN</span>
-                            <span class="skill-tag">TCP/IP</span>
-                            <span class="skill-tag">VPN</span>
-                            <span class="skill-tag">Firewall</span>
-                            <span class="skill-tag">Network Security</span>
-                            <span class="skill-tag">Troubleshooting</span>
-                        </div>
-                    </div>
+    <section id="skills" class="py-20 bg-gray-200 dark:bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4" data-aos="fade-up" data-aos-duration="800">
+            <h2 class="text-4xl font-bold text-center mb-10 text-teal-600 dark:text-teal-400"><i class="fas fa-tools mr-2"></i>Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="skill-card p-6 bg-white dark:bg-gray-700 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300" data-aos="zoom-in">
+                    <h4 class="text-xl font-semibold text-teal-500"><i class="fas fa-code mr-2"></i>Programming Languages</h4>
+                    <p class="mt-2">Python, Java, SQL, C++, HTML5, CSS, JavaScript, VB.NET, Bash</p>
                 </div>
-                <div class="proficiencies">
-                    <h3 class="proficiencies-title">Core Proficiencies</h3>
-                    <div class="proficiency-grid">
-                        <div class="proficiency-item">
-                            <i class="fas fa-headset"></i>
-                            <h4>IT Support & Troubleshooting</h4>
-                            <p>Hardware/software diagnostics, desktop support, peripheral setup, remote user assistance</p>
-                        </div>
-                        <div class="proficiency-item">
-                            <i class="fas fa-project-diagram"></i>
-                            <h4>Network Administration</h4>
-                            <p>LAN/WAN configuration, network troubleshooting, IP telephony, video conferencing</p>
-                        </div>
-                        <div class="proficiency-item">
-                            <i class="fas fa-user-cog"></i>
-                            <h4>System Administration</h4>
-                            <p>Active Directory management, Windows/Linux systems, transversal systems (BAS, LOGIS, PERSAL)</p>
-                        </div>
-                        <div class="proficiency-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <h4>Security & Data Management</h4>
-                            <p>System security, anti-virus support, data backups, network monitoring</p>
-                        </div>
-                    </div>
+                <div class="skill-card p-6 bg-white dark:bg-gray-700 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="100">
+                    <h4 class="text-xl font-semibold text-teal-500"><i class="fas fa-tools mr-2"></i>Frameworks & Technologies</h4>
+                    <p class="mt-2">Linux, Ubuntu, Microsoft Azure, Active Directory, ManageEngine (ServiceDesk Plus, ADAudit Plus), MS Office, BAS, LOGIS, PERSAL</p>
+                </div>
+                <div class="skill-card p-6 bg-white dark:bg-gray-700 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="200">
+                    <h4 class="text-xl font-semibold text-teal-500"><i class="fas fa-star mr-2"></i>Tools</h4>
+                    <p class="mt-2">VS Code, ServiceDesk Plus, ADAudit Plus, Power BI, Tableau, Remote Desktop, WSUS, SCCM, Wireshark</p>
+                </div>
+                <div class="skill-card p-6 bg-white dark:bg-gray-700 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 col-span-full" data-aos="zoom-in" data-aos-delay="300">
+                    <h4 class="text-xl font-semibold text-teal-500"><i class="fas fa-cogs mr-2"></i>Proficiencies</h4>
+                    <ul class="mt-2 list-disc list-inside">
+                        <li><strong>IT Support & Troubleshooting</strong>: Hardware/software diagnostics, desktop support, peripheral setup (printers, routers), remote user assistance</li>
+                        <li><strong>Network Administration</strong>: LAN/WAN configuration, network troubleshooting, IP telephony, video conferencing setup</li>
+                        <li><strong>System Administration</strong>: Active Directory management, Windows XP/7/10/11, Linux/Ubuntu, transversal systems (BAS, LOGIS, PERSAL)</li>
+                        <li><strong>IT Service Management</strong>: Help desk operations, ticket logging, user training, ManageEngine ServiceDesk Plus/ADAudit Plus</li>
+                        <li><strong>Security & Data Management</strong>: System security, anti-virus support, data backups, network monitoring</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="section experience">
-            <div class="container">
-                <h2 class="section-title">
-                    <span class="title-number">03.</span> Professional Experience
-                </h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3>Software Developer Intern</h3>
-                                <span class="timeline-date">
-                                    <i class="far fa-calendar-alt"></i> May 2024 - Present
-                                </span>
-                            </div>
-                            <p class="timeline-company">
-                                <i class="fas fa-building"></i> Department of Sport, Arts and Culture, Pretoria
-                            </p>
-                            <ul class="timeline-list">
-                                <li>Configured and maintained workstations, printers, and peripherals for seamless functionality on MS Windows XP, 7, 10, Linux, Ubuntu, and transversal systems</li>
-                                <li>Troubleshot and resolved hardware, software, and LAN/WAN issues, ensuring operational efficiency and a virus-free network</li>
-                                <li>Installed and optimized software applications and network configurations, supporting email, internet, IP telephony, and video conferencing</li>
-                                <li>Provided user training and help desk support, logging calls and resolving queries to enhance system usability</li>
-                                <li>Performed backups and anti-virus management to ensure system security and data integrity</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3>Computer Science Tutor</h3>
-                                <span class="timeline-date">
-                                    <i class="far fa-calendar-alt"></i> Apr 2023 - Dec 2023
-                                </span>
-                            </div>
-                            <p class="timeline-company">
-                                <i class="fas fa-university"></i> University of Fort Hare, Alice
-                            </p>
-                            <ul class="timeline-list">
-                                <li>Guided students in using Microsoft Office tools, improving technical proficiency in software navigation and application use</li>
-                                <li>Provided hands-on support to enhance students' computer literacy, including skills in keyboarding and basic hardware interaction</li>
-                                <li>Fostered an inclusive learning environment, boosting student engagement and confidence in using computer systems</li>
-                            </ul>
-                        </div>
-                    </div>
+    <section id="experience" class="py-20">
+        <div class="max-w-4xl mx-auto px-4" data-aos="fade-up" data-aos-duration="800">
+            <h2 class="text-4xl font-bold text-center mb-10 text-teal-600 dark:text-teal-400"><i class="fas fa-briefcase mr-2"></i>Professional Experience</h2>
+            <div class="space-y-8">
+                <div class="experience-card p-6 bg-white dark:bg-gray-700 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300" data-aos="fade-up">
+                    <h4 class="text-xl font-semibold text-teal-500"><i class="fas fa-briefcase mr-2"></i>Software Developer Intern</h4>
+                    <p class="text-gray-600 dark:text-gray-300">Department of Sport, Arts and Culture, Pretoria | May 2024 – Present</p>
+                    <ul class="list-disc pl-6 mt-2 text-gray-700 dark:text-gray-200">
+                        <li>Configured and maintained workstations, printers, and peripherals (e.g., routers, projectors) for seamless functionality on MS Windows XP, 7, 10, Linux, Ubuntu, and transversal systems (BAS, LOGIS, PERSAL).</li>
+                        <li>Troubleshot and resolved hardware, software, and LAN/WAN issues, ensuring operational efficiency and a virus-free network.</li>
+                        <li>Installed and optimized software applications and network configurations, supporting email, internet, IP telephony, and video conferencing.</li>
+                        <li>Provided user training and help desk support, logging calls, and resolving queries to enhance system usability and computer literacy.</li>
+                        <li>Performed backups and anti-virus management to ensure system security and data integrity.</li>
+                    </ul>
+                </div>
+                <div class="experience-card p-6 bg-white dark:bg-gray-700 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="text-xl font-semibold text-teal-500"><i class="fas fa-chalkboard-teacher mr-2"></i>Computer Science Tutor</h4>
+                    <p class="text-gray-600 dark:text-gray-300">University of Fort Hare, Alice | Apr 2023 – Dec 2023</p>
+                    <ul class="list-disc pl-6 mt-2 text-gray-700 dark:text-gray-200">
+                        <li>Guided students in using Microsoft Office tools, improving technical proficiency in software navigation and application use.</li>
+                        <li>Provided hands-on support to enhance students' computer literacy, including skills in keyboarding and basic hardware interaction.</li>
+                        <li>Fostered an inclusive learning environment, boosting student engagement and confidence in using computer systems.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>              
 
-        <!-- Education Section -->
-        <section id="education" class="section education">
-            <div class="container">
-                <h2 class="section-title">
-                    <span class="title-number">04.</span> Education & Certifications
-                </h2>
-                <div class="education-grid">
-                    <div class="education-column">
-                        <h3 class="education-subtitle">
-                            <i class="fas fa-graduation-cap"></i> Education
-                        </h3>
-                        <div class="education-cards">
-                            <div class="education-card">
-                                <div class="education-year">2023</div>
-                                <h4>B.Sc. Honours in Computer Science</h4>
-                                <p>University of Fort Hare, Alice</p>
-                            </div>
-                            <div class="education-card">
-                                <div class="education-year">2019-2022</div>
-                                <h4>B.Sc. in Computer Science</h4>
-                                <p>University of Fort Hare, Alice</p>
-                            </div>
-                            <div class="education-card">
-                                <div class="education-year">2018</div>
-                                <h4>National Senior Certificate</h4>
-                                <p>Dweba Senior Secondary School</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="education-column">
-                        <h3 class="education-subtitle">
-                            <i class="fas fa-certificate"></i> Certifications
-                        </h3>
-                        <div class="certifications-grid">
-                            <div class="cert-card">
-                                <div class="cert-icon google">
-                                    <i class="fab fa-google"></i>
-                                </div>
-                                <div class="cert-info">
-                                    <h4>Google Business Intelligence</h4>
-                                    <p>Google | 2025</p>
-                                </div>
-                            </div>
-                            <div class="cert-card">
-                                <div class="cert-icon azure">
-                                    <i class="fab fa-microsoft"></i>
-                                </div>
-                                <div class="cert-info">
-                                    <h4>Microsoft Azure Administrator</h4>
-                                    <p>Alison | 2025</p>
-                                </div>
-                            </div>
-                            <div class="cert-card">
-                                <div class="cert-icon comptia">
-                                    <i class="fas fa-shield-alt"></i>
-                                </div>
-                                <div class="cert-info">
-                                    <h4>CompTIA Security+</h4>
-                                    <p>Alison | 2025</p>
-                                </div>
-                            </div>
-                            <div class="cert-card">
-                                <div class="cert-icon comptia">
-                                    <i class="fas fa-laptop"></i>
-                                </div>
-                                <div class="cert-info">
-                                    <h4>CompTIA A+</h4>
-                                    <p>Alison | 2025</p>
-                                </div>
-                            </div>
-                            <div class="cert-card">
-                                <div class="cert-icon linux">
-                                    <i class="fab fa-linux"></i>
-                                </div>
-                                <div class="cert-info">
-                                    <h4>Complete Linux Training</h4>
-                                    <p>Packt | 2025</p>
-                                </div>
-                            </div>
-                            <div class="cert-card">
-                                <div class="cert-icon google">
-                                    <i class="fab fa-google"></i>
-                                </div>
-                                <div class="cert-info">
-                                    <h4>Google IT Support</h4>
-                                    <p>Google | 2025</p>
-                                </div>
-                            </div>
-                            <div class="cert-card">
-                                <div class="cert-icon security">
-                                    <i class="fas fa-lock"></i>
-                                </div>
-                                <div class="cert-info">
-                                    <h4>Advanced Network Security</h4>
-                                    <p>LearnQuest | 2025</p>
-                                </div>
-                            </div>
-                            <div class="cert-card">
-                                <div class="cert-icon cisco">
-                                    <i class="fas fa-network-wired"></i>
-                                </div>
-                                <div class="cert-info">
-                                    <h4>Intro to Cybersecurity</h4>
-                                    <p>CISCO | 2023</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <section id="education" class="py-20">
+        <div class="max-w-4xl mx-auto px-4" data-aos="fade-up" data-aos-duration="800">
+            <h2 class="text-4xl font-bold text-center mb-10 text-teal-600 dark:text-teal-400"><i class="fas fa-graduation-cap mr-2"></i>Education & Certifications</h2>
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-2xl font-semibold text-teal-500"><i class="fas fa-graduation-cap mr-2"></i>Education</h3>
+                    <p class="text-gray-700 dark:text-gray-200">B.Sc. Honours in Computer Science, University of Fort Hare, Alice | 2023</p>
+                    <p class="text-gray-700 dark:text-gray-200">B.Sc. in Computer Science, University of Fort Hare, Alice | 2019 – 2022</p>
+                    <p class="text-gray-700 dark:text-gray-200">National Senior Certificate, Dweba Senior Secondary School | 2018</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-teal-500"><i class="fas fa-certificate mr-2"></i>Certifications</h3>
+                    <ul class="list-disc pl-6 text-gray-700 dark:text-gray-200">
+                        <li>Google Business Intelligence, Google | 2025</li>
+                        <li>Microsoft Azure Administrator, Alison, 2025</li>
+                        <li>CompTIA Security+, Alison, 2025</li>
+                        <li>CompTIA A+, Alison, 2025</li>
+                        <li>Complete Linux Training Course, Packt | 2025</li>
+                        <li>Google IT Support, Google | 2025</li>
+                        <li>Advanced Network Security, LearnQuest | 2025</li>
+                        <li>Introduction to Cybersecurity, CISCO, 2023</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section contact">
-            <div class="container">
-                <h2 class="section-title">
-                    <span class="title-number">05.</span> Get In Touch
-                </h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <p class="contact-intro">
-                            I'm currently looking for new opportunities. Whether you have a question 
-                            or just want to say hi, I'll try my best to get back to you!
-                        </p>
-                        <div class="contact-methods">
-                            <a href="mailto:anammyolwa@gmail.com" class="contact-method">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <span class="contact-label">Email</span>
-                                    <span class="contact-value">anammyolwa@gmail.com</span>
-                                </div>
-                            </a>
-                            <a href="tel:+27640434984" class="contact-method">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <span class="contact-label">Phone</span>
-                                    <span class="contact-value">+27 64 043 4984</span>
-                                </div>
-                            </a>
-                            <a href="https://linkedin.com/in/anam-myolwa-149371239" target="_blank" rel="noopener noreferrer" class="contact-method">
-                                <div class="contact-icon">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <span class="contact-label">LinkedIn</span>
-                                    <span class="contact-value">anam-myolwa</span>
-                                </div>
-                            </a>
-                            <a href="https://www.google.com/maps/place/Pretoria" target="_blank" rel="noopener noreferrer" class="contact-method">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <span class="contact-label">Location</span>
-                                    <span class="contact-value">Pretoria, Gauteng</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <form class="contact-form" id="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required placeholder="Your name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-submit">
-                            <span>Send Message</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
+    <section id="contact" class="py-20 bg-gray-200 dark:bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4" data-aos="fade-up" data-aos-duration="800">
+            <h2 class="text-4xl font-bold text-center mb-10 text-teal-600 dark:text-teal-400"><i class="fas fa-envelope mr-2"></i>Contact Me</h2>
+            <form class="space-y-6 max-w-lg mx-auto">
+                <input type="text" placeholder="Name" class="w-full p-4 rounded-lg text-gray-900 bg-white border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-500 transition-all duration-300">
+                <input type="email" placeholder="Email" class="w-full p-4 rounded-lg text-gray-900 bg-white border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-500 transition-all duration-300">
+                <textarea placeholder="Message" class="w-full p-4 rounded-lg text-gray-900 bg-white border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-500 transition-all duration-300 h-36"></textarea>
+                <button type="submit" class="w-full p-4 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-lg hover:from-teal-600 hover:to-teal-700 hover:scale-105 transition-all duration-300 shadow-md"><i class="fas fa-paper-plane mr-2"></i>Send Message</button>
+            </form>
+            <div class="mt-10 text-center space-y-2">
+                <p><i class="fas fa-envelope mr-2 text-teal-500"></i>Email: <a href="mailto:anammyolwa@gmail.com" class="text-teal-500 hover:text-teal-400 transition-colors duration-200">anammyolwa@gmail.com</a></p>
+                <p><i class="fas fa-phone mr-2 text-teal-500"></i>Phone: <a href="tel:+27640434984" class="text-teal-500 hover:text-teal-400 transition-colors duration-200">+27 64 043 4984</a></p>
+                <p><i class="fab fa-linkedin mr-2 text-teal-500"></i>LinkedIn: <a href="https://linkedin.com/in/anam-myolwa-149371239" class="text-teal-500 hover:text-teal-400 transition-colors duration-200">linkedin.com/in-anam-myolwa</a></p>
+                <p><i class="fas fa-map-marker-alt mr-2 text-teal-500"></i>Location: <a href="https://www.google.com/maps/place/Pretoria,+Gauteng,+South+Africa" class="text-teal-500 hover:text-teal-400 transition-colors duration-200">Pretoria, Gauteng</a></p>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-text">Designed & Built by Anam Myolwa</p>
-                <p class="footer-copyright">&copy; 2025 All rights reserved.</p>
-            </div>
-            <div class="footer-social">
-                <a href="https://linkedin.com/in/anam-myolwa-149371239" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="mailto:anammyolwa@gmail.com" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
+    <footer class="py-8 bg-gray-900 text-white text-center">
+        <p>© 2025 Anam Myolwa. All rights reserved.</p>
+        <div class="mt-4 space-x-4">
+            <a href="https://linkedin.com/in/anam-myolwa-149371239" class="text-teal-500 hover:text-teal-400 transition-colors duration-200 hover:scale-110"><i class="fab fa-linkedin text-3xl"></i></a>
+            <a href="mailto:anammyolwa@gmail.com" class="text-teal-500 hover:text-teal-400 transition-colors duration-200 hover:scale-110"><i class="fas fa-envelope text-3xl"></i></a>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
